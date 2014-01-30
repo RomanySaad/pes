@@ -1,8 +1,15 @@
 $(document).ready(function () {
-    window.setInterval(ForceControlInjection, 50);
+    var observer = new window.WebKitMutationObserver(function() {
+        InjectControls()
+    });
+
+    observer.observe(document, {
+        subtree: true,
+        attributes: true
+    });
 });
 
-function ForceControlInjection() {
+function InjectControls() {
     if ($("#trackInfo").length > 0 && $("#downloadLink").length == 0) {
         var fullArtistName = $("#trackInfo .trackinfo-p ").first().text();
         var byArtistText = $("#trackInfo .trackinfo-p span").first().text();
