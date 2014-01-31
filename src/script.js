@@ -30,8 +30,9 @@ function InjectControls() {
 		$("#trackInfo").append("<span id='downloadLink' class='p-fontHighlight trackinfo-p__span'>&#x25BC</span><a id='mp3Download' href='" + mp3Link + "' download='" + prettyMp3Link + "'>Download this song</a>");
 
 		$("#skipButton").unbind();
-		$("#skipButton").click(function (event) {
+		$("#skipButton").click(function (e) {
 			$("#jp_audio_0")[0].currentTime = 999;
+			e.stopPropagation();
 		});
 
 		$(".progressRow__progressBar").click(function (e) {
