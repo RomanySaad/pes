@@ -40,5 +40,8 @@ function InjectControls() {
 
 			$("#jp_audio_0")[0].currentTime = currentTime;
 		});
+		
+		//Dynamically insert favicon
+		$('head').append('<link href="//pandora.com/favicon.ico" rel="shortcut icon" type="image/x-icon" />');
 	}
 }
