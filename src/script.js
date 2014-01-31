@@ -23,7 +23,7 @@ function InjectControls() {
 		//prettyMp3Link = prettyMp3Link.toLowerCase() 
 		//prettyMp3Link = prettyMp3Link.replace(/[\s]/g, '_') // Replace spaces with underscores
 
-		$("#trackInfo").append("<span id='downloadLink' class='p-fontHighlight trackinfo-p__span'>&#x25BC</span><a href='" + mp3Link + "' download='" + prettyMp3Link + "'>Download this song</a> | <a href='" + $("#albumArtImage").attr("src") + "' download='" + prettyCovertArtLink + "'>album art</a><br />");
+		$("#trackInfo").append("<span id='downloadLink' class='p-fontHighlight trackinfo-p__span'>&#x25BC</span><a id='mp3Download' href='" + mp3Link + "' download='" + prettyMp3Link + "'>Download this song</a> | <a href='" + $("#albumArtImage").attr("src") + "' download='" + prettyCovertArtLink + "'>album art</a><br />");
 
 		$("#skipButton").unbind();
 		$("#skipButton").click(function (event) {
